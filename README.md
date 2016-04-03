@@ -1,2 +1,2 @@
 # data-push
-A simple data piush example in the form of a presentation
+A simple data push example in the form of a presentation
