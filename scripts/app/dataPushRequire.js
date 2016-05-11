@@ -2,26 +2,24 @@ require.config({
 	'baseUrl': 'scripts/',
 
     'paths': {
-		'jquery': 'lib/jquery-2.1.4.min',
+		'jquery': 'lib/jquery.min',
 		'underscore': 'lib/lodash.min',
 		'backbone': 'lib/backbone-min',
 
         // hosted version
-		'augmented': '/augmented/scripts/core/augmented',
-        'augmentedPresentation': '/augmented/scripts/presentation/augmentedPresentation'
+		//'augmented': '/augmented/scripts/core/augmented',
+        //'augmentedPresentation': '/augmented/scripts/presentation/augmentedPresentation'
 
         // local version
-		//'augmented': 'lib/augmented',
-        //'augmentedPresentation': 'lib/augmentedPresentation'
+		'augmented': 'lib/augmented',
+        'augmentedPresentation': 'lib/augmentedPresentation'
 	}
 });
 
 require(['augmented', 'augmentedPresentation'], function(Augmented, Presentation) {
     "use strict";
     var app = new Augmented.Presentation.Application("Data Push");
-    //app.registerStylesheet("styles/main.css");
-    app.registerStylesheet("https://fonts.googleapis.com/css?family=Work+Sans:300,400");
-    app.registerStylesheet("https://fonts.googleapis.com/css?family=Roboto:100");
+    app.registerStylesheet("https://fonts.googleapis.com/css?family=Roboto:100,300,400");
     app.start();
 
     var data = [
